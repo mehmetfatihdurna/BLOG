@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% if article%}
+<h1 style="color: blanchedalmond;background:black;padding:10px;text-align:center">{{article.title|safe}}</h1>
+<br>
+<p>{{article.content|safe}}</p>
+
+{% else %}
+<div class="alert alert-danger">Böyle bir makale bulunmuyor</div>
+{% endif %}
+
+{% endblock body %}

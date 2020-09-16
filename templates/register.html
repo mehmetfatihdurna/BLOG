@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% from "includes/formhelpers.html" import render_field %}
+
+{% block body %}
+<h3>Kayıt Olun</h3>
+<hr>
+<div class = "jumbotron">
+    <form method="POST" class="border border-light p-5">
+        {{ render_field(form.name,class = "form-control mb-4" ,placeholder = "İsim",id = "isim")}}
+        {{ render_field(form.username,class = "form-control mb-4",placeholder = "Kullanıcı Adı") }}
+        {{ render_field(form.email,class = "form-control mb-4",placeholder = "Email") }}
+        {{ render_field(form.password,class = "form-control mb-4",placeholder = "Parola") }}
+        {{ render_field(form.confirm,class = "form-control mb-4",placeholder = "Parola Tekrar") }}
+        <button type="submit", class="btn btn-primary">Kayıt Ol</button>
+        <br>
+        <br>
+        <a href="/login">Hesabınız var mı? Giriş yapın...</a>
+
+    </form>
+</div>
+
+{% endblock body %}

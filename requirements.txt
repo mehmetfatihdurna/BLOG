@@ -1,0 +1,4 @@
+Flask==1.1.1
+Flask-SQLAlchemy==2.4.4
+passlib==1.7.2
+WTForms==2.3.3
